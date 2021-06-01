@@ -1,0 +1,24 @@
+.container {
+    height: 60px;
+    width: inherit;
+    background: rgb(237, 237, 237);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 20px;
+}
+
+.profilePicture svg {
+    width: 40px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.options {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 30%;
+    color: rgb(145, 145, 145);
+    cursor: pointer;
+}

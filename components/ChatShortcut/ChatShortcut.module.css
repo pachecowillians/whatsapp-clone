@@ -1,0 +1,117 @@
+.container {
+    width: inherit;
+    height: 70px;
+    background: #fff;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px 13px;
+    font-size: 14px;
+    user-select: none;
+    cursor: pointer;
+    transition: all ease 0.2s;
+}
+
+.profilePicture svg, .profilePicture img {
+    width: 50px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.infoContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 23vw;
+    margin-left: 15px;
+}
+
+.upRow {
+    display: flex;
+    width: inherit;
+    flex-direction: row;
+    justify-content: space-between;
+    width: inherit;
+}
+
+.lastMessage {
+    width: inherit;
+    height: fit-content;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.contactName {
+    font-size: 17px;
+}
+
+.container:hover {
+    background: #f5f5f5;
+}
+
+.downRow {
+    display: flex;
+    width: inherit;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    transform: none;
+}
+
+.expand {
+    transition: all ease 0.1s !important;
+    width: 0px !important;
+    color: transparent;
+    outline: none;
+}
+
+.container:hover .expand {
+    width: 30px !important;
+    color: #9f9f9f;
+}
+
+.timeLastMessage {
+    color: #9f9f9f;
+}
+
+.dropdownMenu {
+    width: 225px;
+    position: absolute;
+    right: -200px;
+    top: 25px;
+    padding: 10px 0px;
+    background: #fff;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .26), 0 2px 10px 0 rgba(0, 0, 0, .16);
+    border-radius: 3px;
+    z-index: 999;
+    transition: all ease 0.2s;
+}
+
+.menuItem {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0px 30px;
+    height: 40px;
+    font-size: 14.5px;
+}
+
+.menuItem:hover {
+    background: #f5f5f5;
+}
+
+.downRow:focus-within .dropdownMenu {
+    transform: scaleY(1);
+}
+
+.downRow:not(:focus-within) .dropdownMenu {
+    transform: scaleY(0);
+}

@@ -1,0 +1,45 @@
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.messagesArea {
+    width: 100%;
+    height: calc(100vh - 120px);
+    position: relative;
+    padding: 20px;
+}
+
+.messageLine{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.message {
+    max-width: 50%;
+    min-width: 10%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background: #fff;
+    padding: 10px;
+    padding-bottom: 25px;
+    margin: 10px 60px;
+    border-radius: 7.5px;
+    font-size: 15px;
+    color: #303030;
+    position: relative;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .26), 0 1px 2px 0 rgba(0, 0, 0, .16);
+}
+
+.messageTime{
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    font-size: 12px;
+    color: rgba(0,0,0,0.45);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

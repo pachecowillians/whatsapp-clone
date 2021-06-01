@@ -1,0 +1,83 @@
+.container {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    width: inherit;
+    height: 50px;
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all ease 0.5s;
+}
+
+.searchArea {
+    background-color: #fff;
+    height: 70%;
+    width: 95%;
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 15px;
+    color: #9f9f9f;
+}
+
+.icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.input {
+    outline: none;
+    font-size: 14px;
+    width: 80%;
+    margin: 0px 20px;
+}
+
+.input:empty:before {
+    content: attr(data-placeholder);
+    transition: all ease 0.2s;
+}
+
+.input:empty:focus:before {
+    color: #fff;
+}
+
+.input:hover {
+    cursor: text;
+}
+
+.container:focus-within {
+    background-color: #fff;
+}
+
+.arrow {
+    position: relative;
+}
+
+.searchIcon {
+    position: absolute;
+}
+
+.container:focus-within .arrow {
+    color: #00a5f4;
+    transform: none;
+    transition: all ease 0.2s;
+}
+
+.container:not(focus-within) .arrow {
+    transform: rotate(-90deg);
+    color: transparent;
+    transition: all ease 0.2s;
+}
+
+.container:focus-within .searchIcon {
+    transform: rotate(90deg);
+    transition: all ease 0.2s;
+    color: transparent;
+}
+
+.container:not(focus-within) .searchIcon {
+    transform: none;
+    transition: all ease 0.2s;
+}

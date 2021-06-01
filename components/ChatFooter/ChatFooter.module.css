@@ -1,0 +1,101 @@
+.container {
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+    width: inherit;
+    height: 60px;
+    background-color: #f8f9fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all ease 0.5s;
+    color: #9f9f9f;
+}
+
+.leftIcons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 10%;
+    padding: 0px 15px;
+    cursor: pointer;
+}
+
+.searchArea {
+    background-color: #fff;
+    height: 70%;
+    width: 95%;
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 15px;
+    color: #9f9f9f;
+}
+
+.attach{
+    transform: rotate(45deg);
+}
+
+.icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 0px 15px;
+    cursor: pointer;
+}
+
+.input {
+    outline: none;
+    font-size: 14px;
+    width: 80%;
+    margin: 0px 20px;
+}
+
+.input:empty:before {
+    content: attr(data-placeholder);
+    transition: all ease 0.2s;
+}
+
+.input:empty:focus:before {
+    color: #fff;
+}
+
+.input:hover {
+    cursor: text;
+}
+
+.container:focus-within {
+    background-color: #fff;
+}
+
+.recordVoice {
+    position: relative;
+}
+
+.sendMessage {
+    position: absolute;
+}
+
+.container:focus-within .sendMessage {
+    color: #00a5f4;
+    transform: none;
+    transition: all ease 0.2s;
+}
+
+.container:not(focus-within) .sendMessage {
+    transform: rotate(-90deg);
+    color: transparent;
+    transition: all ease 0.2s;
+}
+
+.container:focus-within .recordVoice {
+    transform: rotate(90deg);
+    transition: all ease 0.2s;
+    color: transparent;
+}
+
+.container:not(focus-within) .recordVoice {
+    transform: none;
+    transition: all ease 0.2s;
+}
